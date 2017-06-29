@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Whats_The_Weather_Update_2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,74 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's The Weather" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KzE-yn-Aim">
+                                <rect key="frame" x="0.0" y="20" width="375" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="0em-zF-4lE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your city name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbb-HF-Pad">
+                                <rect key="frame" x="0.0" y="87" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="eg:New Delhi, Mumbai etc." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n7f-1e-vWa">
+                                <rect key="frame" x="0.0" y="131" width="375" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCw-8v-qE4">
+                                <rect key="frame" x="16" y="238" width="351" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydQ-XS-Qb2">
+                                <rect key="frame" x="0.0" y="200" width="375" height="30"/>
+                                <state key="normal" title="Get Weather Details"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GhV-Ml-LkM"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="simon-matzinger-272157.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Ber-0e-lEg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="n7f-1e-vWa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="131" id="Fgh-kk-dKa"/>
+                            <constraint firstItem="KzE-yn-Aim" firstAttribute="trailing" secondItem="tbb-HF-Pad" secondAttribute="trailing" id="URy-9f-zkf"/>
+                            <constraint firstItem="n7f-1e-vWa" firstAttribute="top" secondItem="tbb-HF-Pad" secondAttribute="bottom" constant="23" id="WFh-EO-ZLc"/>
+                            <constraint firstItem="n7f-1e-vWa" firstAttribute="leading" secondItem="tbb-HF-Pad" secondAttribute="leading" id="XjY-bL-jCa"/>
+                            <constraint firstItem="ydQ-XS-Qb2" firstAttribute="top" secondItem="n7f-1e-vWa" secondAttribute="bottom" constant="39" id="bUF-S0-2eI"/>
+                            <constraint firstItem="KzE-yn-Aim" firstAttribute="leading" secondItem="tbb-HF-Pad" secondAttribute="leading" id="dxs-Ni-YTy"/>
+                            <constraint firstItem="KzE-yn-Aim" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="gQG-aK-oEm"/>
+                            <constraint firstAttribute="trailing" secondItem="ydQ-XS-Qb2" secondAttribute="trailing" id="hqL-zE-V4n"/>
+                            <constraint firstItem="n7f-1e-vWa" firstAttribute="leading" secondItem="ydQ-XS-Qb2" secondAttribute="leading" id="ojl-eB-liU"/>
+                            <constraint firstItem="n7f-1e-vWa" firstAttribute="trailing" secondItem="ydQ-XS-Qb2" secondAttribute="trailing" id="pTo-PB-vEo"/>
+                            <constraint firstItem="ydQ-XS-Qb2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="v5o-ld-NuL"/>
+                            <constraint firstItem="n7f-1e-vWa" firstAttribute="trailing" secondItem="tbb-HF-Pad" secondAttribute="trailing" id="yAE-th-uds"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myTextField" destination="n7f-1e-vWa" id="OX0-42-HHV"/>
+                        <outlet property="resultLabel" destination="vCw-8v-qE4" id="65l-57-Nu2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="simon-matzinger-272157.jpg" width="1000" height="659"/>
+    </resources>
 </document>
